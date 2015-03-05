@@ -1,5 +1,6 @@
 ##Read first five rows to identify classes of the columns
-tab5rows <- read.table("./data/household_power_consumption.txt", header = TRUE, sep =";", nrows = 5)
+unzip("./data/exdata-data-household_power_consumption.zip", files = "household_power_consumption.txt")
+tab5rows <- read.table("household_power_consumption.txt", header = TRUE, sep =";", nrows = 5)
 tab5rows
 classes <- sapply(tab5rows, class)
 classes[1:2] <- "character"
